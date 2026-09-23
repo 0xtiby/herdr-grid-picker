@@ -1,0 +1,20 @@
+id = "tiby.grid-picker"
+name = "Grid Picker"
+version = "0.3.0"
+min_herdr_version = "0.9.0"
+description = "Pick a pane grid (e.g. 3x3, 4x6) in a popup and split the current pane into RxC equal panes"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "pick"
+title = "Pick pane grid..."
+contexts = ["workspace", "pane"]
+command = ["node", "open-picker.js"]
+
+[[panes]]
+id = "picker"
+title = "Grid picker"
+placement = "popup"
+width = "44%"
+height = 16
+command = ["node", "picker.js"]
